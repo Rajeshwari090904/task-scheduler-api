@@ -1,0 +1,101 @@
+/* File: src/main/resources/static/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1, h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* --- Form Styling --- */
+#add-task-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#add-task-form input, #add-task-form textarea, #add-task-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding in the element's total width/height */
+}
+
+#add-task-form input[type="text"],
+#add-task-form textarea {
+    flex-grow: 1; /* Allows title and description to fill space */
+    width: 100%;
+}
+
+#add-task-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    flex-basis: 150px; /* Gives the button a fixed minimum width */
+}
+
+/* --- Task Card Styling --- */
+.task-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff;
+}
+
+.task-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.task-card p {
+    margin: 5px 0;
+}
+
+.task-card button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+/* --- Status Colors --- */
+.pending {
+    border-left-color: #ffc107; /* Yellow border */
+}
+
+.overdue {
+    background-color: #ffe5e5; /* Light red background */
+    border-left-color: #dc3545; /* Red border */
+}
+
+.completed {
+    background-color: #e6ffed; /* Light green background */
+    border-left-color: #28a745; /* Green border */
+}
+
+.task-card button:first-of-type { /* Mark Complete */
+    background-color: #007bff;
+    color: white;
+}
+
+.task-card button:last-of-type { /* Delete */
+    background-color: #dc3545;
+    color: white;
+}
